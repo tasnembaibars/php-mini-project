@@ -60,7 +60,7 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" name="dproduct" rows="5" Required></textarea>
   </div>
   <button type="submit"  name="add" class="btn btn-light">Add product</button>
-  <button type="button" name="view" class="btn btn-light"><a href ="view_page.php">view products</a></button>
+  <button type="button" name="view" class="btn btn-light"><a href ="http://localhost/php-mini-project/mini-project/view.php">view products</a></button>
 </form>
 </div>
 
@@ -90,10 +90,10 @@ $_SESSION['description'] .=$_POST['dproduct'].'<br>';
 $_SESSION['image'] .=$_POST['improduct'].'<br>';
 
 
-$name=$_POST['nproduct'];
-$price=$_POST['pproduct'];
-$desc=$_POST['dproduct'];
-$image=$_POST['improduct'];
+// $name=$_POST['nproduct'];
+// $price=$_POST['pproduct'];
+// $desc=$_POST['dproduct'];
+// $image=$_POST['improduct'];
 
 echo ('<tr style="background-color:#f9fcfd;  " ><td>' . $_SESSION['name'] . '</td><td><img src="/image/' . $_SESSION['image'] . '"></td><td>' . $_SESSION['price'] . '</td><td>' . $_SESSION['description']. '</td></tr>');
 }

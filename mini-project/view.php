@@ -1,5 +1,5 @@
 <?php session_start();
-
+// session_unset()
 ?>
 <!doctype html>
 <html lang="en">
@@ -37,7 +37,7 @@
         <a class="nav-link" href="http://localhost/php-mini-project/mini-project/add.php">Add product<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="view_page.php">view products</a>
+        <a class="nav-link " href="http://localhost/php-mini-project/mini-project/view.php">view products</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -63,15 +63,15 @@ $price =explode("<br>",$_SESSION['price']);
 $description =explode("<br>",$_SESSION['description']);
 $image =explode("<br>",$_SESSION['image']);
 
-for($i=0;$i<count($name)-1;$i++ ){
-echo
-' <div class="col-md-4 mt-2 mx-0 " style="" > <div class="card" >
-<img src="image/logo.png" class="card-img-top" alt="..."> 
-<div class="card-body">
-<h5 class="card-title">'.$name[$i].'</h5>
-<p class="card-subtitle">'.$price[$i].'</p>
-<p class="card-text">'.$description[$i].'</p>
-</div></div></div> '
+// for($i=0;$i<count($name)-1;$i++ ){
+// echo
+// '<div style="display: inline-block;"> <div class="col-md-4 mt-2 mx-0 " style="" > <div class="card" >
+// <img src="image/logo.png" class="card-img-top" alt="..." style="width:100%"> 
+// <div class="card-body" style="width:900px">
+// <h5 class="card-title">'.$name[$i].'</h5>
+// <p class="card-subtitle">'.$price[$i].'</p>
+// <p class="card-text">'.$description[$i].'</p>
+// </div></div></div></div> '
 // echo "<div class='col-md-4 mt-2'>
 //     <div class='card '>
 //     <div class='card-body'>
@@ -84,12 +84,36 @@ echo
 //       </div>
 //     </div>
 //     </div>
-//   ";
+// </div>
+//  "
 
 
-;}
-
+// ;}
+for($i=0;$i<count($name)-1;$i++ ){
+  
+    
+  echo(
+  
+  ' <div style="display: inline-block;">
+  <div class="container col-md-4 mt-4 mb-3">
+    <div class="card" style="width:300px">
+  
+   <img class="card-img-top" src="image/logo.png" alt="Card image" style="width:100%">
+   
+     <div class="card-body">
+        <h4 class="card-title" style="color:#7f7f7f">'.$name[$i].'</h4>
+        <p class="card-text"style="color:#7f7f7f">'.$description[$i].'</p>
+        <p class="card-text"style="color:#7f7f7f">'.$price[$i].'</p>
+      </div>
+      </div>
+      </div>
+  </div>')
+  
+  ;} 
+  
 ?>
+
+
 <!-- <img src="image/back.jpg " height=300px> -->
 
   <!-- Footer -->
